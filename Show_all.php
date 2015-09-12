@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container-fluid">
 
     <!-- Static navbar -->
     <nav class="navbar navbar-default nav-edit">
@@ -35,22 +35,106 @@
                     <li class="active"><a href="Show_all.php">Show all</a></li>
                     <li><a href="Search.php">Search</a></li>
                     <li><a href="Delete.php">Delete</a></li>
+                    <li><a href="update.php">Update</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
     </nav>
 
+
+
     <?php
     include 'connection.php';
-//    $sname = $_POST['search'];
     $query = "SELECT * FROM students";
     $result = mysql_query($query);
 
     while($person = mysql_fetch_array($result)){
-        echo "<h3>" . $person['Name']. "</h3>";
-        echo "<p>" . $person['Bangla']."</p>";
-    }
-    ?>
+        ?>
+        <div class="container-fluid">
+            <table class="table table-bordered margin-content text-center">
+                <thead>
+                <tr>
+                    <th>Roll Number</th>
+                    <th>Student Name</th>
+                    <th>Bangla</th>
+                    <th>English</th>
+                    <th>Religion</th>
+                    <th>General Knowledge</th>
+                    <th>Drawing</th>
+                    <th>Hand Writing</th>
+                    <th>Recital</th>
+                    <th>SIng</th>
+                    <th>Art</th>
+                    <th>Other</th>
+                    <th>Attendance</th>
+                    <th>Weekly Exam</th>
+                    <th>Weekly Exam Average</th>
+                    <th>PT</th>
+                    <th>Total mark</th>
+                    <th><button type="button" class="btn btn-danger">Delete</button></th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+
+                    <td>1</td>
+                    <td>
+                        <h4> <?php echo $person['Name']; ?> </h4>
+                    </td>
+                    <td>
+                        <p> <?php echo $person['Bangla'] ?> </p>
+                    </td>
+                    <td>
+                        <p> <?php echo $person['English']; ?> </p>
+                    </td>
+                    <td>
+                        <p> <?php echo $person['Religion']; ?> </p>
+                    </td>
+                    <td>
+                        <p> <?php echo $person['Gknowledge']; ?> </p>
+                    </td>
+                    <td>
+                        <p> <?php echo $person['Drawing']; ?> </p>
+                    </td>
+                    <td>
+                        <p> <?php echo $person['Writing']; ?> </p>
+                    </td>
+                    <td>
+                        <p> <?php echo $person['Recital']; ?> </p>
+                    </td>
+                    <td>
+                        <p> <?php echo $person['Sing']; ?> </p>
+                    </td>
+                    <td>
+                        <p> <?php echo $person['Art']; ?> </p>
+                    </td>
+                    <td>
+                        <p> <?php echo $person['Other']; ?> </p>
+                    </td>
+                    <td>
+                        <p> <?php echo $person['Attendance']; ?> </p>
+                    </td>
+                    <td>
+                        <p> <?php echo $person['Weeklyexam']; ?> </p></td>
+                    <td>
+                        <p> <?php echo $person['Weeklyexamaver']; ?> </p></td>
+                    <td>
+                        <p> <?php echo $person['Pt']; ?> </p>
+                    </td>
+                    <td>
+                        <p> <?php echo $person['Total']; ?> </p>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-lg btn-success">Edit</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    <?php } ?>
+
 
 </div>
 

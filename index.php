@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div class="container margin-top-top">
+<div class="container-fluid margin-top-top">
 
     <form class="form-signin" action="index.php" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>

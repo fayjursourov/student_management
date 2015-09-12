@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container-fluid">
 
     <!-- Static navbar -->
     <nav class="navbar navbar-default nav-edit">
@@ -35,6 +35,7 @@
                     <li><a href="Show_all.php">Show all</a></li>
                     <li><a href="Search.php">Search</a></li>
                     <li><a href="Delete.php">Delete</a></li>
+                    <li><a href="update.php">Update</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -42,7 +43,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4"></div>
-        <div class="col-md-4">Welcome to student management system.</div>
+        <div class="col-md-4"><h2 class="margin-content">Welcome to student management system.</h2></div>
         <div class="col-md-4"></div>
     </div>
 </div>

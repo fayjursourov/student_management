@@ -45,3 +45,33 @@ body {
 .margin-top-top{
     margin-top: 160px;
 }
+.insert-form div[class^="col"] {
+    margin-bottom: 15px;
+}
+
+.insert-form p {
+    color: #398439;
+    font-weight: normal;
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.insert-form{
+    margin-top: 17px;
+}
+.submite-button{
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+    margin-top: 24px;
+}
+.notice{
+    color: #398439;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-search{
+    width:100%;
+    margin-bottom: 45px;
+    text-align: center;
+}
