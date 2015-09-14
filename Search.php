@@ -26,15 +26,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="after_login.php">Students Report</a>
+                <a class="navbar-brand" href="home.php">Students Report</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="after_login.php">Home</a></li>
-                    <li><a href="Insert.php">Insert</a></li>
-                    <li><a href="Show_all.php">Show all</a></li>
-                    <li class="active"><a href="Search.php">Search</a></li>
-                    <li><a href="Delete.php">Delete</a></li>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="insert.php">Insert</a></li>
+                    <li><a href="show_all.php">Show all</a></li>
+                    <li class="active"><a href="search.php">Search</a></li>
+                    <li><a href="delete.php">Delete</a></li>
                     <li><a href="update.php">Update</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
@@ -42,7 +42,7 @@
     </nav>
 
     <div class="container-fluid">
-        <form action="Search.php" method="post" class="text-center">
+        <form action="search.php" method="post" class="text-center">
             <div class="row search-section">
                     <tr>
                         <td>

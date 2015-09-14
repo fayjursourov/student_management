@@ -26,15 +26,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="after_login.php">Students Report</a>
+                    <a class="navbar-brand" href="home.php">Students Report</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="after_login.php">Home</a></li>
-                        <li class="active"><a href="Insert.php">Insert</a></li>
-                        <li><a href="Show_all.php">Show all</a></li>
-                        <li><a href="Search.php">Search</a></li>
-                        <li><a href="Delete.php">Delete</a></li>
+                        <li><a href="home.php">Home</a></li>
+                        <li class="active"><a href="insert.php">Insert</a></li>
+                        <li><a href="show_all.php">Show all</a></li>
+                        <li><a href="search.php">Search</a></li>
+                        <li><a href="delete.php">Delete</a></li>
                         <li><a href="update.php">Update</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
@@ -60,16 +60,20 @@
             $w_exam= $_POST['fweekly-exam'];
             $w_exam_aver = $_POST['fweekly-exam-aver'];
             $pt = $_POST['fpt'];
+            $total = 0;
 
-            $total = $ban + $eng + $eng + $knowl + $draw + $write + $reci + $sing + $art + $other + $attend + $w_exam + $w_exam_aver+$pt;
-            echo $total;
+            $total = $ban + $eng + $relig + $knowl + $draw + $write + $reci + $sing + $art + $other + $attend + $w_exam
+                        + $w_exam_aver + $pt;
+//            echo $total;
 
-            $sql = "INSERT INTO `s_management`.`students` (`ID`, `Name`, `Bangla`, `English`, `Religion`,`Gknowledge`,`Drawing`,`Writing`,`Recital`,`Sing`,`Art`,`Other`,`Attendance`, `Weeklyexam`,`Weeklyexamaver`,`Pt`,`Total')
-                      VALUES (NULL, '$name', '$ban', '$eng', '$relig', '$knowl', '$draw', '$write', '$reci', '$sing', '$art', '$other', '$attend', '$w_exam', '$w_exam_aver', '$pt','$total')";
+            $sql = "INSERT INTO `s_management`.`students` (`ID`, `Name`, `Bangla`, `English`, `Religion`,`Gknowledge`,
+                    `Drawing`,`Writing`,`Recital`,`Sing`,`Art`,`Other`,`Attendance`, `Weeklyexam`,`Weeklyexamaver`,
+                      `Pt`,`total`)
+                      VALUES (NULL, '$name', '$ban', '$eng', '$relig', '$knowl', '$draw', '$write', '$reci', '$sing',
+                      '$art', '$other', '$attend', '$w_exam', '$w_exam_aver', '$pt','$total')";
 
-            echo $sql;
+//            echo $sql;
 
-    //    mysql_query($sql) or die(mysql_error());
             if(mysql_query($sql)){
                 echo '<h1 class="notice text-center">Insert successfully</h1>';
             }
@@ -80,7 +84,7 @@
         ?>
 
     <div class="row">
-        <form action="Insert.php" method="post" class="text-center insert-form">
+        <form action="insert.php" method="post" class="text-center insert-form">
             <div class="col-md-4 col-sm-6">
                 <p>Student Name</p>
                 <input type="text" name="fname" value="">

@@ -22,15 +22,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="after_login.php">Students Report</a>
+                <a class="navbar-brand" href="home.php">Students Report</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="after_login.php">Home</a></li>
-                    <li><a href="Insert.php">Insert</a></li>
-                    <li><a href="Show_all.php">Show all</a></li>
-                    <li><a href="Search.php">Search</a></li>
-                    <li class="active"><a href="Delete.php">Delete</a></li>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="insert.php">Insert</a></li>
+                    <li><a href="show_all.php">Show all</a></li>
+                    <li><a href="search.php">Search</a></li>
+                    <li class="active"><a href="delete.php">Delete</a></li>
                     <li><a href="update.php">Update</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
@@ -41,7 +41,9 @@
 
 <?php
     include 'connection.php';
-    $query = "DELETE FROM `students` WHERE ID = '12'";
+//    $query = "DELETE FROM `students` WHERE ID = '12'";
+     $query = "SELECT `total` FROM `students` ORDER BY `total` DESC";
+
 //    echo $query;
     if(mysql_query($query)){
         echo 'Deleted successfully';
@@ -52,7 +54,6 @@
 //    var_dump($result); check a veriable work or not
 
 ?>
-
 
 
 

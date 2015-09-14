@@ -32,10 +32,10 @@ if($_POST && $_POST['submit']){
     $user = $_POST['fuser'];
     $pass = $_POST['fpass'];
     if($user == 'sourov' && $pass == '1234'){
-        header("Location: after_login.php");
+        header("Location: home.php");
         die();
 //        $_COOKIE['username'] = $user;
-//        echo '<meta http-equiv="refresh" content="0; url=after_login.php" />';
+//        echo '<meta http-equiv="refresh" content="0; url=home.php" />';
     }
     else{
         echo 'Username or Password error!';

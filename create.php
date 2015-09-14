@@ -32,6 +32,6 @@
 
 if($_POST['submit'] = 'submit'){
     mysql_query("INSERT INTO `s_management`.`students` (`ID`, `Name`, `Bangla`) VALUES (NULL, '$name', '$ban')") or die(mysql_error());
-    header("Location: Show_all.php");
+    header("Location: show_all.php");
 }
 ?>
