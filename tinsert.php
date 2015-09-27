@@ -1,3 +1,12 @@
+<?php
+//if(!isset($_SESSION['username'])){
+//    echo '<meta http-equiv="refresh" content="0; url=index.php" />';
+//}
+
+include('login_required.php');
+?>
+
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
@@ -33,9 +42,9 @@
                         <li><a href="home.php">Home</a></li>
                         <li class="active"><a href="insert.php">Insert</a></li>
                         <li><a href="show_all.php">Show all</a></li>
-                        <li><a href="search.php">Search</a></li>
-                        <li><a href="delete.php">Delete</a></li>
-                        <li><a href="update.php">Update</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right log-out">
+                        <li><a href="log_out.php" class="log-out">LOG OUT</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
@@ -153,6 +162,13 @@
         </form>
     </div>
 
+    <!-- footer -->
+    <nav class="navbar navbar-default nav-edit home-footer">
+        <div class="container-fluid">
+            <p href="http://www.lifesoft.net" class="main-footer">lifesoft.net &copy; 2015</p>
+        </div>
+    </nav>
+    <!-- footer -->
 </div>
 
 

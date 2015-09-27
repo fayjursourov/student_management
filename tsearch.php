@@ -33,9 +33,6 @@
                     <li><a href="home.php">Home</a></li>
                     <li><a href="insert.php">Insert</a></li>
                     <li><a href="show_all.php">Show all</a></li>
-                    <li class="active"><a href="search.php">Search</a></li>
-                    <li><a href="delete.php">Delete</a></li>
-                    <li><a href="update.php">Update</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->

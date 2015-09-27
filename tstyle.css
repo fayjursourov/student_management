@@ -1,9 +1,10 @@
 body {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
     //background-image: url("img/bg-imge.jpg");
     background-repeat: repeat-y;
     background-size: 100% auto;
+
 }
 
 .form-signin {
@@ -74,4 +75,45 @@ body {
     width:100%;
     margin-bottom: 45px;
     text-align: center;
+}
+.navbar-header .footer-content{
+    font-size: 15px;
+}
+.main-footer{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #777;
+    margin-top: 12px;
+}
+.home-table{
+    margin-top: 155px;
+}
+.welcome{
+    color: rgba(0, 0, 0, 0.59);
+    font-size: 60px;
+    margin-top: 66px;
+    text-shadow: 1px -8px 1px rgba(218, 216, 216, 0.53);
+}
+.home-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.delete_student_info{
+    margin-left: 18px;
+}
+.show-all-content td {
+    padding-top: 15px;
+}
+.log-out{
+    background-color: #CAEC64;
+    border-radius: 10px;
+}
+
+.login-notice{
+    font-size: 18px;
+    color: #ac2925;
+    padding-top: 5px;
 }

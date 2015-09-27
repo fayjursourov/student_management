@@ -7,6 +7,10 @@
     <title>Student Management</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+    <![endif]-->
+
 </head>
 <body>
 
@@ -30,8 +34,8 @@
                     <li><a href="insert.php">Insert</a></li>
                     <li><a href="show_all.php">Show all</a></li>
                     <li><a href="search.php">Search</a></li>
-                    <li class="active"><a href="delete.php">Delete</a></li>
-                    <li><a href="update.php">Update</a></li>
+                    <li><a href="delete.php">Delete</a></li>
+                    <li class="active"><a href="update.php">Update</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -39,24 +43,16 @@
 </div>
 
 
-<?php
-    include 'connection.php';
-//    $query = "DELETE FROM `students` WHERE ID = '12'";
-     $query = "SELECT `total` FROM `students` ORDER BY `total` DESC";
 
-//    echo $query;
-    if(mysql_query($query)){
-        echo 'Deleted successfully';
-    }
-    else{
-        echo 'Not delete';
-    }
-//    var_dump($result); check a veriable work or not
+<?php
+
+    include 'connection.php';
+
+    $sql = "UPDATE `students` SET `Name` = 'Joy' WHERE `ID` = '66';";
+    echo $sql;
+    mysql_query($sql) or die(mysql_error());
 
 ?>
-
-
-
 
 
 

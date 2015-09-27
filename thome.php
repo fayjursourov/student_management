@@ -1,3 +1,11 @@
+<?php
+//if(!isset($_SESSION['username'])){
+//    echo '<meta http-equiv="refresh" content="0; url=index.php" />';
+//}
+
+include('login_required.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -33,20 +41,48 @@
                     <li class="active"><a href="home.php">Home</a></li>
                     <li><a href="insert.php">Insert</a></li>
                     <li><a href="show_all.php">Show all</a></li>
-                    <li><a href="search.php">Search</a></li>
-                    <li><a href="delete.php">Delete</a></li>
-                    <li><a href="update.php">Update</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right log-out">
+                    <li><a href="log_out.php" class="log-out">LOG OUT</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
     </nav>
 <div class="container">
+    <div class="row text-center">
+        <p class="margin-content welcome">Welcome to the student management system.</p>
+    </div>
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4"><h4 class="margin-content">Welcome to student management system.</h4></div>
-        <div class="col-md-4"></div>
+        <table class="table home-table">
+            <thead>
+            <tr>
+                <th  class="text-center">Name</th>
+                <th  class="text-center">Email</th>
+                <th  class="text-center">Mobile</th>
+                <th  class="text-center">University</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td  class="text-center">Md. Fayjur Rahman (Sourov)</td>
+                <td  class="text-center">sourov.gm@gmail.com</td>
+                <td  class="text-center">+8801920387741</td>
+                <td  class="text-center">Daffodil International University</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
+
+
+    <!-- footer -->
+    <nav class="navbar navbar-default nav-edit home-footer">
+        <div class="container-fluid">
+            <p href="http://www.lifesoft.net" class="main-footer">lifesoft.net &copy; 2015</p>
+        </div>
+    </nav>
+    <!-- footer -->
+
 
 
 
